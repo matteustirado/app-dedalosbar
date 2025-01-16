@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    background: linear-gradient(to right, white, lightblue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+.emojis {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 5em;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.emojis button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emojis img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.emoji-pessimo:hover,
+.emoji-ruim:hover,
+.emoji-ok:hover,
+.emoji-bom:hover,
+.emoji-excelente:hover {
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.input-container {
+    padding: 30px;
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input-container input {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+input[type="text"] {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eae9e9;
+    width: 80%;
+    max-width: 500px;
+    outline: none;
+}
+
+.swipe-button-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: none;
+    background-color: #eae9e9;
+    border-radius: 25px;
+}
+
+.swipe-button-track {
+    background-color: #eae9e9;
+    border-radius: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.swipe-button {
+    background-color: #f5a623;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.swipe-button.swiped {
+    background-color: green;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    background: linear-gradient(to right, white, lightblue);
+    color: #121212;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button p {
+    font-size: 8px;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #f5a623, #f76b1c);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .emojis {
+        gap: 20px;
+    }
+
+    .emojis img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .input-container {
+        width: 90%;
+    }
+
+    .input-container input {
+        width: 90%;
+    }
+
+    .swipe-button-container {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 90%;
+        font-size: 14px;
+    }
+}
