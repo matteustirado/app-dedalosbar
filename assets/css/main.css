@@ -13,7 +13,14 @@ body {
 }
 
 .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+}
+
+.container-body{
+    display: flex;
 }
 
 .title {
@@ -21,7 +28,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2em;
+    font-size: 50px;
     font-weight: bolder;
     margin-bottom: 40px;
 }

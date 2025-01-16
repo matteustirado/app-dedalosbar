@@ -1,36 +1,97 @@
-# Dédalos Bar - Pesquisa de Clima
+# Pesquisa de Clima Dédalos
 
-Este é um projeto simples de página web para interagir com os usuários sobre o clima emocional deles no Dédalos Bar, utilizando emojis para coletar feedback. A página exibe emojis, permite que o usuário envie sua opinião e interaja com um mecanismo de deslizar (swipe) para enviar o feedback. O projeto também possui um formulário de input que aparece ao clicar nos emojis.
+Este projeto foi criado para coletar e interpretar o clima emocional dos frequentadores do Dédalos Bar, utilizando emojis para feedback. Além disso, inclui a página subsequente "Rádio Dédalos", que oferece uma experiência complementar focada em música e interatividade temática. Ambas as páginas são projetadas para proporcionar uma navegação dinâmica, responsiva e engajante.
 
-## Funcionalidades
+---
 
-- **Escolha do Emoji**: O usuário pode clicar em um emoji para representar como está se sentindo.
-- **Input de Texto**: Após selecionar o emoji, o campo de texto aparece permitindo que o usuário forneça um motivo para seu clima.
-- **Envio de Feedback**: O envio do feedback é feito através de um botão de deslizar (swipe), que deve ser arrastado até o final para concluir o envio.
-- **Respostas de Feedback**: Ao enviar o feedback, o botão de deslizar muda para verde, indicando que o envio foi bem-sucedido. Uma mensagem de confirmação também aparece.
+## Estrutura do Projeto
 
-## Funcionalidades de Responsividade
+- **Pesquisa de Clima (Principal)**: 
+  - Página inicial do projeto, focada na coleta e análise de feedback emocional.
+  - Utiliza emojis e inputs para entender o clima dos usuários.
 
-O projeto é responsivo e foi projetado para funcionar bem em dispositivos móveis, tablets e desktops. Ele possui estilos específicos para diferentes tamanhos de tela, como:
+- **Rádio Dédalos (Ramificação)**:
+  - Página secundária que expande a experiência com interatividade musical.
+  - Permite aos usuários sugerirem músicas e acessarem informações detalhadas sobre faixas.
 
-- **Mobile** (max-width: 640px)
-- **Tablet** (min-width: 641px e max-width: 1023px)
+---
+
+## Funcionalidades Principais
+
+### Pesquisa de Clima
+
+- **Escolha do Emoji**: Os usuários podem clicar em um emoji para representar seu humor.
+
+- **Input de Texto**: Após selecionar um emoji, um campo de texto permite descrever os motivos do sentimento.
+
+- **Envio de Feedback**: O botão de deslizar (swipe) é usado para confirmar o envio, com resposta visual e mensagem de confirmação.
+
+### Rádio Dédalos
+
+- **Formulário de Pesquisa**: Os usuários podem inserir nome de músicas, artistas e número de pulseira para envio de dados.
+
+- **Ficha Técnica**: Apresentação de informações detalhadas sobre músicas, incluindo nome, artista, duração e gênero.
+
+- **Informações do Dia**: Destaques diários, como gênero musical em evidência e artistas mais relevantes.
+
+---
+
+## Responsividade
+
+Ambas as páginas foram otimizadas para dispositivos móveis, tablets e desktops:
+
+- **Dispositivos Móveis** (max-width: 640px):
+
+- - Layout reorganizado para colunas únicas.
+
+- - Elementos centralizados e ajustados para telas pequenas.
+
+- **Tablets** (min-width: 641px e max-width: 1023px):
+
+- - Ajustes intermediários no layout e estilos.
+
+- **Desktop**: Layouts amplos com disposição horizontal das seções.
+
+---
 
 ## Tecnologias Utilizadas
 
-- **HTML5**: Estrutura da página.
-- **CSS3**: Estilos e layout responsivo.
-- **JavaScript**: Funcionalidades interativas como os emojis, input de texto e swipe para envio.
-- **Fontes**: Google Fonts (Poppins) para fontes personalizadas.
+- **HTML5**: Estruturação semântica das páginas.
 
-## Fixes
+- **CSS3**: Estilização visual e responsividade.
 
-### Swipe Responsivo para Dispositivos Touch
-Foi corrigido o comportamento do botão de swipe, que anteriormente não reconhecia gestos de toque (touch gestures) em dispositivos móveis. Agora, o botão responde tanto a eventos de mouse quanto a eventos de toque, garantindo funcionalidade em todas as plataformas.
+- **JavaScript**: Funcionalidades interativas e dinâmicas.
 
-**Arquivos Alterados:**
-- `script.js`
+- **Fontes**: Google Fonts (Poppins) para design moderno.
 
-**Detalhes da Correção:**
-- Adicionados os eventos `touchstart`, `touchmove` e `touchend` no código JavaScript.
-- Implementada lógica para distinguir entre eventos de mouse e de toque e tratar as interações adequadamente.
+## Funcionalidades de Swipe
+
+- Botão de "arrastar para enviar" funcional em dispositivos móveis e desktops.
+
+- Feedback em tempo real com mudanças de cor e mensagens de sucesso.
+
+- Suporte a eventos de toque (touch gestures) e mouse.
+
+## Melhorias e Atualizações
+
+### Correções
+
+- **Compatibilidade com Gestos Touch**: Ajustes no botão de swipe para dispositivos móveis.
+
+- **Responsividade Refinada**: Experiência uniforme em telas de diferentes tamanhos.
+
+### Novos Recursos
+
+- **Página Rádio Dédalos**: Introduz interatividade musical.
+
+- **Design Moderno**: Uso de gradientes e animações.
+
+---
+
+## Contribuições
+
+Contribuições são bem-vindas! Abra issues ou envie pull requests para melhorias.
+
+---
+
+**Projeto Dédalos**: Criado para proporcionar experiências interativas únicas aos frequentadores do Dédalos Bar. 🚀
