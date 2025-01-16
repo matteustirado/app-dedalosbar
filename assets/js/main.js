@@ -43,17 +43,18 @@ inputField.addEventListener('input', () => {
     }
 });
 
-swipeButton.addEventListener('mousedown', (event) => {
+function handleSwipeStart(event) {
     isSwiping = true;
-    startX = event.clientX;
+    startX = event.type === 'touchstart' ? event.touches[0].clientX : event.clientX;
     swipeButton.style.transition = 'none';
-});
+}
 
-document.addEventListener('mousemove', (event) => {
+function handleSwipeMove(event) {
     if (!isSwiping) return;
 
+    const currentX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
     const offsetX = Math.min(
-        Math.max(event.clientX - startX, 0),
+        Math.max(currentX - startX, 0),
         swipeTrack.offsetWidth - swipeButton.offsetWidth
     );
 
@@ -70,9 +71,9 @@ document.addEventListener('mousemove', (event) => {
         inputField.value = '';
         setTimeout(hideInputAndSwipe, 2000);
     }
-});
+}
 
-document.addEventListener('mouseup', () => {
+function handleSwipeEnd() {
     if (!isSwiping) return;
 
     if (!swipeCompleted) {
@@ -80,4 +81,12 @@ document.addEventListener('mouseup', () => {
     }
     isSwiping = false;
     swipeButton.style.transition = 'left 0.3s ease';
-});
+}
+
+swipeButton.addEventListener('mousedown', handleSwipeStart);
+document.addEventListener('mousemove', handleSwipeMove);
+document.addEventListener('mouseup', handleSwipeEnd);
+
+swipeButton.addEventListener('touchstart', handleSwipeStart);
+document.addEventListener('touchmove', handleSwipeMove);
+document.addEventListener('touchend', handleSwipeEnd);

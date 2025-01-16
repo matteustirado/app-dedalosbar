@@ -22,3 +22,15 @@ O projeto é responsivo e foi projetado para funcionar bem em dispositivos móve
 - **CSS3**: Estilos e layout responsivo.
 - **JavaScript**: Funcionalidades interativas como os emojis, input de texto e swipe para envio.
 - **Fontes**: Google Fonts (Poppins) para fontes personalizadas.
+
+## Fixes
+
+### Swipe Responsivo para Dispositivos Touch
+Foi corrigido o comportamento do botão de swipe, que anteriormente não reconhecia gestos de toque (touch gestures) em dispositivos móveis. Agora, o botão responde tanto a eventos de mouse quanto a eventos de toque, garantindo funcionalidade em todas as plataformas.
+
+**Arquivos Alterados:**
+- `script.js`
+
+**Detalhes da Correção:**
+- Adicionados os eventos `touchstart`, `touchmove` e `touchend` no código JavaScript.
+- Implementada lógica para distinguir entre eventos de mouse e de toque e tratar as interações adequadamente.
